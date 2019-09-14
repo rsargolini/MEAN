@@ -1,1 +1,7 @@
-[{"id":0,"hikename":"Mt. Washington","hikediff":"Strenuous","hikedesc":"Mt. Washington (6,288 feet) is the highest peak east of the Mississippi River and north of the Carolinas. The upper part of the mountain has a climate similar to that of northern Labrador and supports a variety of alpine flora and fauna.\r\n","imageurl":"/uploads/1d600a6fec9f09cb295d7ad662e88e56"}]
+[{
+    "id": 0,
+    "hikename": "Mt. Washington",
+    "hikediff": "Strenuous",
+    "hikedesc": "Mt. Washington (6,288 feet) is the highest peak east of the Mississippi River and north of the Carolinas. The upper part of the mountain has a climate similar to that of northern Labrador and supports a variety of alpine flora and fauna.",
+    "imageurl": "/uploads/FooBar_Washington.jpg"
+}]

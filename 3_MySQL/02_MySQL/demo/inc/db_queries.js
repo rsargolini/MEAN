@@ -5,23 +5,19 @@ function executeQuery(conn, res, qryStr) {
             console.log('Error while performing Query.');
             console.log('Executing Query:\n' + qryStr);
             conn.end();
-			
-			if (err.toString().indexOf('ER_DUP_ENTRY')) {
-				res.json(
-						{
-						'success'  : false,
-						'msg'      : 'Error executing query.',
-						'err_code' : 'ER_DUP_ENTRY'
-					}
-				 );
-			} else {
-				res.json(
-					{
-						'success' : false,
-						'msg'     : 'Error executing query.'
-					}
-				 );
-			}
+
+            if (err.toString().indexOf('ER_DUP_ENTRY')) {
+                res.json({
+                    'success': false,
+                    'msg': 'Error executing query.',
+                    'err_code': 'ER_DUP_ENTRY'
+                });
+            } else {
+                res.json({
+                    'success': false,
+                    'msg': 'Error executing query.'
+                });
+            }
         }
         //console.log(rows);
         conn.end();
@@ -32,17 +28,17 @@ function executeQuery(conn, res, qryStr) {
 module.exports = {
     postUserLogin: function(conn, req, res) {
         if (conn) {
-			var userName = req.body.user_name;
-			var userPassword = req.body.user_password;
-            var qryStr = 'SELECT * FROM user WHERE user_name = "' +  userName + '" and password = "' + userPassword + '"';
+            var userName = req.body.user_name;
+            var userPassword = req.body.user_password;
+            var userEmail = req.body.user_email;
+            var qryStr = 'SELECT * FROM user WHERE user_name = "' + userName + '" and password = "' + userPassword + '" and email = "' + userEmail + '"';
+            console.log(qryStr);
             executeQuery(conn, res, qryStr);
         } else {
-           res.json(
-				{
-					'success' : false,
-					'msg'     : 'No DB Connection established.'
-				}
-			);
+            res.json({
+                'success': false,
+                'msg': 'No DB Connection established.'
+            });
         }
     }
 };

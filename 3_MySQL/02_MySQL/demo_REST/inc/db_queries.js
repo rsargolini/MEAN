@@ -65,11 +65,12 @@ module.exports = {
             });
         }
     },
-    postUserUpdate: function(conn, req, res) {
+    putUserUpdate: function(conn, req, res) {
         if (conn) {
-            var userName = req.body.user_name;
-            var userPassword = req.body.user_password;
-            var qryStr = 'UPDATE user SET password = "' + userPassword + '" WHERE user_name = "' + userName + '"';
+            var userId = req.params.user_id;
+            var update_type = req.body.update_type;
+            var update_value = req.body.update_value;
+            var qryStr = `UPDATE user SET ${update_type} = "${update_value}" WHERE id = ${userId} `;
             executeQuery(conn, res, qryStr);
         } else {
             res.json({

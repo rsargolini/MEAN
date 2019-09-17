@@ -12,9 +12,6 @@ This example assumes a MySQL User with the following
 ## Setup
 + Create MySQL DB User as defined above
 + Execute sql/create_and_seed.sql in MySQL to build and populate the DB with test data
-
-![MySQL Workbench](img/mysql_workbench.png?raw=true "MySQL Workbench")
-
 + Create a working dir and run ```npm init```
 + Create .env file containing the following
 

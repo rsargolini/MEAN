@@ -15,10 +15,10 @@ This example assumes a MySQL User with the following
 + Create a working dir and run ```npm init```
 + Create .env file containing the following
 
-DB_HOST=localhost
-DB_NAME=demo
-DB_USER=hca
-DB_USER_PWD=password
+- DB_HOST=localhost
+- DB_NAME=demo
+- DB_USER=hca
+- DB_USER_PWD=password
 
 
 + See code in demo

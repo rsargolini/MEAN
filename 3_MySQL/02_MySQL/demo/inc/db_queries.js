@@ -32,7 +32,7 @@ module.exports = {
             var userPassword = req.body.user_password;
             var userEmail = req.body.user_email;
             var qryStr = 'SELECT * FROM user WHERE user_name = "' + userName + '" and password = "' + userPassword + '" and email = "' + userEmail + '"';
-            console.log(qryStr);
+            //console.log(qryStr);
             executeQuery(conn, res, qryStr);
         } else {
             res.json({
